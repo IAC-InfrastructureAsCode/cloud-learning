@@ -1,0 +1,9 @@
+Resources:
+  Ec2Instance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-e2adf99e # Amazon Linux AMI in Southeast-Asia
+      Tags:
+        - Key: "Name"
+          Value: !Join [ " ", [ EC2, Instance, with, Fn, Join ] ]
